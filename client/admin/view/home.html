@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-md-12 col-xs-12">
+      <div class="well-sm w3-blue w3-center"><h2><i class="fa fa-play" aria-hidden="true"></i> PlayMedia - Admin</h2></div>
+  </div>
+  <div class="container">
+    <div class="pull-right margin-top-10">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"> <i class="fa fa-play" aria-hidden="true"></i> Create Playlist</button>
+  </div>
+
+<div class="row col-xs-12">
+  <div class="flex col-xs-12">
+    <div class="tile w3-blue-grey text-capitalize w3-hover w3-btn"  ng-repeat="x in playlists" ng-click="goToPlaylist(x)">
+      {{x.name}}
+    </div>
+  </div>
+<div class="modal fade" id="myModal" role="dialog" data-backdrop="false">
+    <div class="modal-dialog modal-xs">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title text-info w3-center">Create New Playlist</h4>
+        </div>
+        <div class="modal-body">
+          <div class="col-md-10 col-md-offset-1 col-xs-12 " >
+        		<div class = "col-md-8 col-md-offset-2 col-xs-12 well-lg">
+
+        			<form ng-submit = "addPlaylist(x)" ng-init = "x = {}">
+        				<input type = "text" class = " form-control " ng-model = "x['name']" placeholder="Playlist Name" data-toggle="tooltip" data-placement="right" title="Name of playlist">
+        				<input type="text" class = "form-control  margin-top-10"  ng-model = "x['artist']" data-toggle="tooltip" data-placement="right" title="artist" rows="6" cols="50" placeholder="artist">
+
+              <div class="w3-center margin-top-10">
+        			<button class = "btn btn-success" type="submit"  >Create PlayList</button>
+              </div>
+        		</form>
+    	     </div>
+         </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

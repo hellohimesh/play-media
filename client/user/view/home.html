@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-md-12 col-xs-12">
+      <div class="well-sm w3-blue w3-center"><h2><i class="fa fa-play" aria-hidden="true"></i> PlayMedia</h2></div>
+  </div>
+  
+  <div class="col-md-10 col-md-offset-1 col-xs-12 well" ng-repeat="x in playlists">
+    <div class="flex w3-grey col-md-12 col-xs-12">
+      <div class=" w3-blue-grey  text-capitalize w3-hover w3-btn"   ng-click="goToPlaylist(x.id)">
+        <h4>{{x.name}}</h4>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,10 @@
+# Header always set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+# Header always set Access-Control-Allow-Origin "http://localhost:80"
+# Header always set Access-Control-Allow-Credentials true
+# Header always set Access-Control-Allow-Headers "accept, content-type"
+# php_value memory_limit 3000M
+# php_value post_max_size 10000M
+# php_value upload_max_filesize 3000M
+# RewriteEngine On
+# RewriteCond %{REQUEST_METHOD} OPTIONS
+# RewriteRule ^(.*)$ $1 [R=200,L]
